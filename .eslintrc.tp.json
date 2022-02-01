@@ -1,0 +1,56 @@
+/*********************************************************************************** 
+/                                                                                  /
+/  NOTES: THIS CONFIG MUST BE INCLUDED IN A PROJECT ONLY USING FOLLOWING PACKAGES: /
+/    - TypeScript                                                                  /
+/    - Prettier                                                                    /
+/                                                                                  /
+***********************************************************************************/
+{
+  "env": {
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "airbnb-base",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "import"
+  ],
+  "rules": {
+    "sort-imports": "off",
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "type",
+          "builtin",
+          "external",
+          "internal",
+          "unknown",
+          "parent",
+          "sibling",
+          "index",
+          "object"
+        ],
+        "newlines-between": "never",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+    "import/newline-after-import": [
+      "error",
+      {
+        "count": 1
+      }
+    ]
+  }
+}
